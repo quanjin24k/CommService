@@ -1,0 +1,57 @@
+package com.bt.property.service1;
+
+import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import com.bt.property.entity.User;
+import com.bt.property.util.HttpHandler;
+import com.bt.property.util.JSONHelper;
+import com.bt.property.util.StaticData;
+import com.bt.property.util.UrlUtils;
+import com.google.gson.JsonObject;
+
+import android.content.Context;
+import android.util.Log;
+
+/**
+ * 登录服务类service
+ * 
+ * @author 24K
+ * @created 2013年12月1日17:58:59
+ */
+public class LoginService extends BaseService {
+
+	public User getLogin(Context context, String username, String password)
+			throws UnsupportedEncodingException, JSONException {
+		List<NameValuePair> params = new ArrayList<NameValuePair>();
+		params.add(new BasicNameValuePair("username", username));
+		params.add(new BasicNameValuePair("password", password));
+		String str = HttpHandler.getResponceContent(
+				UrlUtils.loginURL.toString(), params, true);
+		System.out.println("login:" + str);
+		// User userInfo = JSONHelper.parseObject(new
+		// JSONObject(str).getString("login"), User.class);//
+		// StaticWebData.currUserInfo = userInfo;
+		// String result = gson.toJson(new JSONObject(str).get("result"),
+		// String.class);
+		String s = gson.fromJson(new JSONObject(str).getString("result"), String.class);
+		User userInfo = null;
+		if (Integer.parseInt(s) == 1) {
+			StaticData.loginStatus = 1;
+			userInfo = gson.fromJson(new JSONObject(str).getString("login"), User.class);
+			StaticData.user = userInfo;
+		} else {
+			userInfo = null;
+		}
+
+		// Log.i(TAG, userInfo.getTRUE_NAME());
+		return userInfo;
+	}
+
+}

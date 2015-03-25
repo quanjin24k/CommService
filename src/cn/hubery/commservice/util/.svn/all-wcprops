@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/SHCM_YHT_2013_Code/!svn/ver/2982/PropertyManagement/src/com/bt/property/util
+END
+ConstantFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/SHCM_YHT_2013_Code/!svn/ver/2982/PropertyManagement/src/com/bt/property/util/ConstantFunction.java
+END
+HttpParameter.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/SHCM_YHT_2013_Code/!svn/ver/2949/PropertyManagement/src/com/bt/property/util/HttpParameter.java
+END
+StaticData.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/SHCM_YHT_2013_Code/!svn/ver/2953/PropertyManagement/src/com/bt/property/util/StaticData.java
+END
+UrlUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/SHCM_YHT_2013_Code/!svn/ver/2984/PropertyManagement/src/com/bt/property/util/UrlUtils.java
+END
+SharedPreferencesUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/SHCM_YHT_2013_Code/!svn/ver/2880/PropertyManagement/src/com/bt/property/util/SharedPreferencesUtil.java
+END
+ConstantUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/SHCM_YHT_2013_Code/!svn/ver/2880/PropertyManagement/src/com/bt/property/util/ConstantUtil.java
+END
+NetWorkUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/SHCM_YHT_2013_Code/!svn/ver/2880/PropertyManagement/src/com/bt/property/util/NetWorkUtil.java
+END
+JSONHelper.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/SHCM_YHT_2013_Code/!svn/ver/2899/PropertyManagement/src/com/bt/property/util/JSONHelper.java
+END
+UIUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/SHCM_YHT_2013_Code/!svn/ver/2947/PropertyManagement/src/com/bt/property/util/UIUtil.java
+END
+HttpHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/SHCM_YHT_2013_Code/!svn/ver/2963/PropertyManagement/src/com/bt/property/util/HttpHandler.java
+END
+Geo2MarsTranslate.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/SHCM_YHT_2013_Code/!svn/ver/2951/PropertyManagement/src/com/bt/property/util/Geo2MarsTranslate.java
+END

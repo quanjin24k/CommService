@@ -1,0 +1,45 @@
+package com.bt.property.service1;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONObject;
+import com.bt.property.service.result.PmpenyListServiceResult;
+import com.bt.property.util.HttpHandler;
+import com.bt.property.util.JSONHelper;
+import com.bt.property.util.UrlUtils;
+import com.google.gson.JsonSyntaxException;
+
+/**
+ * pmpeny列表的服务类
+ * @author  24K
+ * @created 2014年2月26日18:16:29
+ */
+public class PmpenyListService extends BaseService {
+
+	public PmpenyListServiceResult pListServiceResult;
+
+	// public PmpenyListServiceResult getPmpenyListServiceResult(String typeId,
+	// String natureId) {
+	public PmpenyListServiceResult getPmpenyListServiceResult(String... params) {
+		List<NameValuePair> valuePairs = new ArrayList<NameValuePair>();
+		 valuePairs.add(new BasicNameValuePair("pmpenyType", params[0]));
+		 valuePairs.add(new BasicNameValuePair("pmpenyPropertyNature", params[1]));
+		 valuePairs.add(new BasicNameValuePair("departmentId", params[2]));
+		 valuePairs.add(new BasicNameValuePair("pmpenyName", params[3]));
+		// post请求
+		String response = HttpHandler.getResponceContent(UrlUtils.pmpenyListURL, valuePairs, false);
+		try {
+			pListServiceResult = gson.fromJson(response, PmpenyListServiceResult.class);
+//			pListServiceResult = JSONHelper.parseObject(new JSONObject(response), PmpenyListServiceResult.class);
+		} catch (JsonSyntaxException e) {
+			e.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return pListServiceResult;
+	}
+
+}

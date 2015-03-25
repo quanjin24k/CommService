@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- title -->
+
+    <RelativeLayout
+        android:id="@+id/ll_title"
+        android:layout_width="match_parent"
+        android:background="#1a94d3"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true" >
+        <TextView android:id="@+id/tv_comm_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:text="天玺国际"/>
+        
+        <ImageView android:id="@+id/iv_comm_phone"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/phone_home_icon"/>
+    </RelativeLayout>
+
+    <!-- viewpager -->
+
+    <RelativeLayout
+        android:id="@+id/layout_tab_imgs"
+        android:layout_width="match_parent"
+        android:layout_below="@id/ll_title"
+        android:layout_height="120dp" >
+
+        <cn.hubery.commservice.view.IndicateViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:background="#3ABEC0" />
+
+        <LinearLayout
+            android:id="@+id/layout_title_imgs"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" />
+    </RelativeLayout>
+
+    <!-- service 闪电送 -->
+    <RelativeLayout
+        android:id="@+id/rl_flash_service"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@id/layout_tab_imgs"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp" >
+
+        <TextView
+            android:id="@+id/tv_flash_service_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="闪电送" />
+
+        <TextView
+            android:id="@+id/tv_flash_service_title_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="(电话一拨  免费上门 急速到家)" />
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/gv_flash_service"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:numColumns="4"
+        android:layout_below="@id/rl_flash_service"
+        android:verticalSpacing="15dp" >
+    </GridView>
+
+    <!-- 社区生活指南 -->
+
+    <TextView
+        android:id="@+id/tv_comm_indicate_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@id/gv_flash_service"
+        android:text="社区生活指南" />
+
+    <GridView
+        android:id="@+id/gv_comm_indicate"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:numColumns="2"
+        android:horizontalSpacing="10dp"
+        android:verticalSpacing="10dp" >
+    </GridView>
+
+</RelativeLayout>

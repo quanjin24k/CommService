@@ -1,0 +1,42 @@
+package com.bt.property.service1;
+
+import java.util.ArrayList;
+import java.util.List;
+import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONException;
+import org.json.JSONObject;
+import android.util.Log;
+import com.bt.property.service.result.FloorListItemServiceResult;
+import com.bt.property.util.HttpHandler;
+import com.bt.property.util.JSONHelper;
+import com.bt.property.util.UrlUtils;
+
+/**
+ * 楼层列表的服务类
+ * @author  24K
+ * @created 2014年2月26日18:16:29
+ */
+public class FloorListItemService extends BaseService {
+
+	private FloorListItemServiceResult result;
+	
+	public FloorListItemServiceResult getFloorItemList(String id, String canOperatePmpeny) {
+		List<NameValuePair> valuePairs = new ArrayList<NameValuePair>();
+		valuePairs.add(new BasicNameValuePair("id", id));
+	    valuePairs.add(new BasicNameValuePair("canOperatePmpeny", canOperatePmpeny));
+		
+		String response = HttpHandler.getResponceContent(UrlUtils.intoFloorViewURL, valuePairs, false);
+		
+		try {
+			result = gson.fromJson(response, FloorListItemServiceResult.class);
+//			result = JSONHelper.parseObject(new JSONObject(response), FloorListItemServiceResult.class);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		Log.i(TAG, response);
+		return result;
+	}
+	
+}

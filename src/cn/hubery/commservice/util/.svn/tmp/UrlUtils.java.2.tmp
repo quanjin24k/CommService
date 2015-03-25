@@ -1,0 +1,55 @@
+package com.bt.property.util;
+
+/**
+ * 各个链接的URL
+ * 
+ * @author 24K
+ * @created 2014年2月24日17:18:15
+ */
+public class UrlUtils {
+
+	public static String IP = "http://192.168.11.65";
+	public static String PORT = ":8080";
+
+	/** 登录 */
+	public static String loginURL = IP + PORT + "/wy/api/login.action";
+	/** 物业列表 --中间list*/
+	public static String pmpenyListURL = IP + PORT + "/wy/api/pmpenyList.action";
+	/** 查询选项--right */
+	public static String intoQueryURL = IP + PORT + "/wy/api/intoQuery.action";
+	/** 物业查看--点击进入详情 */
+	public static String intoPmpenyViewURL = IP + PORT + "/wy/api/intoPmpenyView.action";
+	/**楼层*/
+	public static String floorListURL = IP + PORT + "/wy/api/floorList.action";
+	/**楼层内部界面*/
+	public static String intoFloorViewURL = IP + PORT + "/wy/api/intoFloorView.action";
+	/**房间列表*/
+	public static String roomListURL = IP + PORT + "/wy/api/roomList.action";
+	/**房间详情*/
+	public static String intoRoomViewURL = IP + PORT + "/wy/api/intoRoomView.action";
+	/**采集列表*/
+	public static String collectListURL = IP + PORT + "/wy/api/collectList.action";
+	/**采集详情*/
+	public static String intoCollectViewURL = IP + PORT + "/wy/api/intoCollectView.action";
+
+	/**大楼信息提交*/
+	public static String submitPmpenyEdit = IP + PORT + "/wy/api/submitPmpenyEdit.action";
+	
+<<<<<<< .mine
+=======
+ 
+>>>>>>> .r2954
+	public static final String GEOCODE_LATLNG_URL = "http://maps.google.com/maps/api/geocode/json?latlng=%s&sensor=true&language=%s";
+<<<<<<< .mine
+=======
+ 
+>>>>>>> .r2954
+	/**组织框架*/
+	public static String intoDepTree = IP + PORT + "/wy/api/intoDepTree.action";
+	
+<<<<<<< .mine
+=======
+ 
+>>>>>>> .r2954
+	
+}

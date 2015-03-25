@@ -1,0 +1,31 @@
+package cn.hubery.commservice.util;
+
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.widget.Toast;
+
+public class NetWorkUtil {
+
+	/**
+	 * 网络是否连接
+	 * 
+	 * @param ct
+	 * @return
+	 */
+	public static boolean isNetworkConect(Context ct) {
+		if (ct == null) {
+			return false;
+		}
+		ConnectivityManager cwjManager = (ConnectivityManager) ct
+				.getSystemService(Context.CONNECTIVITY_SERVICE);
+		NetworkInfo info = cwjManager.getActiveNetworkInfo();
+		if (info != null) {
+			return info.isAvailable();
+		} else {
+			Toast.makeText(ct, "请检查网络状态", Toast.LENGTH_SHORT).show();
+			return false;
+		}
+	}
+
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <RelativeLayout android:id="@+id/rl_takeout_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#1a94d3">
+        
+        <Button android:id="@+id/btn_takeout_title_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:background="@drawable/back_bg"/>
+        
+        <TextView android:id="@+id/tv_takeout_title_catagery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="外卖服务"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+    
+    <cn.hubery.commservice.view.xlist.XListView 
+        android:id="@+id/takeout_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+    </cn.hubery.commservice.view.xlist.XListView>
+    
+
+</LinearLayout>
