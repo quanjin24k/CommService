@@ -17,6 +17,11 @@ import android.view.Window;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+/**
+ * 主界面
+ * @author Hubery
+ * @edit 2015年3月26日09:24:02
+ */
 @SuppressLint("NewApi")
 public class HomeActivity extends Activity implements OnClickListener {
 

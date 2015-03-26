@@ -8,6 +8,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import cn.hubery.commservice.R;
 
+/**
+ * 便民工具界面fragment
+ * @author Hubery
+ * @edit 2015年3月26日09:26:16
+ */
 @SuppressLint("NewApi")
 public class FragmentConvenient extends Fragment {
 

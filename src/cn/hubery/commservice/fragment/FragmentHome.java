@@ -30,6 +30,11 @@ import cn.hubery.commservice.adapter.GridViewServiceAdapter;
 import cn.hubery.commservice.adapter.IndicatePagerAdapter;
 import cn.hubery.commservice.util.PhoneCallUtil;
 
+/**
+ * home界面 fragment
+ * @author Hubery
+ * @edit 2015年3月26日09:26:16
+ */
 @SuppressLint({ "NewApi", "ValidFragment" })
 public class FragmentHome extends Fragment {
 

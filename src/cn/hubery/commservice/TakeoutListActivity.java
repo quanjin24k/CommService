@@ -10,8 +10,12 @@ import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
-import android.widget.Toast;
 
+/**
+ * 外卖列表
+ * @author Hubery
+ * @edit 2015年3月26日09:25:16
+ */
 public class TakeoutListActivity extends Activity {
 
 	private ListView takeout_listview;

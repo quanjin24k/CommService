@@ -2,12 +2,41 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
+    
+    
+    	<ImageView 
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:layout_centerInParent="true"
+    	    android:src="@drawable/near_center_big"/>
 
-
-        <ImageView
+    	<ImageView android:id="@+id/near_center_iv"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:layout_centerInParent="true"
+    	    android:src="@drawable/near_center"/>
+    	
+    	<ImageView android:id="@+id/near_service_iv"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:src="@drawable/near_service"
+		    android:layout_centerHorizontal="true"
+		    android:layout_centerVertical="true"
+		    android:layout_marginBottom="5dp"/>
+    	
+		<ImageView android:id="@+id/near_map_iv"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:src="@drawable/near_map"
+		    android:layout_toLeftOf="@id/near_center_iv"/>
+    	
+    	
+        <!-- <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:src="@drawable/frag_near_bg" />
+            android:src="@drawable/frag_near_bg" /> -->
+            
+        
 
 </RelativeLayout>

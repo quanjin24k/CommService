@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_takeout_item_net_service_1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/iv_takeout_item_net_service_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_discount_sound_bg" />
+
+        <TextView
+            android:id="@+id/tv_takeout_item_net_service_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:singleLine="true"
+            android:text="优惠促销活动"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_takeout_item_net_service_1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/iv_takeout_item_net_service_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_new_bg" />
+
+        <TextView
+            android:id="@+id/tv_takeout_item_net_service_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:singleLine="true"
+            android:text="微信、支付宝、手机QQ在线支付乐享9.5折;" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_takeout_item_net_service_2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/ll_takeout_item_net_service_1"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/iv_takeout_item_net_service_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_discount_bg" />
+
+        <TextView
+            android:id="@+id/tv_takeout_item_net_service_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:singleLine="true"
+            android:text="新店开业,满百赠20元代金券." />
+    </LinearLayout>
+
+</LinearLayout>

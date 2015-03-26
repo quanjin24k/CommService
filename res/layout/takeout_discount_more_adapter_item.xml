@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp" >
+
+    <TextView
+        android:id="@+id/takeout_discount_more_adapter_week"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="星期一" />
+
+    <TextView
+        android:id="@+id/takeout_discount_more_adapter_goods_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/takeout_discount_more_adapter_week"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text="深夜食堂酱面" />
+    
+    <TextView android:id="@+id/takeout_discount_more_adapter_goods_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="￥18元"
+        android:layout_alignBaseline="@id/takeout_discount_more_adapter_goods_name"
+        android:layout_toLeftOf="@+id/takeout_discount_more_adapter_goods_pic"
+        android:textColor="#ea3720"/>
+    
+    <TextView android:id="@+id/takeout_discount_more_adapter_goods_price_old"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="原价￥25"
+        android:layout_marginRight="10dp"
+        android:layout_alignBaseline="@id/takeout_discount_more_adapter_goods_name"
+        android:layout_toLeftOf="@+id/takeout_discount_more_adapter_goods_price"
+        android:textColor="#b4b4b4"/>
+
+    <ImageView
+        android:id="@+id/takeout_discount_more_adapter_goods_pic"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentRight="true"
+        android:padding="10dp"
+        android:src="@drawable/more_discount_goods_bg" />
+
+</RelativeLayout>

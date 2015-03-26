@@ -7,6 +7,11 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 
+/**
+ * 社区服务 adapter
+ * @author Hubery
+ * @edit 2015年3月26日09:26:16
+ */
 public class GridViewServiceAdapter extends BaseAdapter {
 
 	private Context mContext;

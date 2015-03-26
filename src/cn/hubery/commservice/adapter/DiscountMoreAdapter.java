@@ -1,24 +1,23 @@
 package cn.hubery.commservice.adapter;
 
 import cn.hubery.commservice.R;
-import cn.hubery.commservice.util.PhoneCallUtil;
 import android.content.Context;
+import android.graphics.Paint;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.View.OnClickListener;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
+import android.widget.TextView;
 
 /**
- * 社区服务 adapter
+ * 更多优惠 adapter。
  * @author Hubery
- * @edit 2015年3月26日09:26:16
+ * @edit 2015年3月26日14:32:32
  */
-public class TakeoutListAdapter extends BaseAdapter {
+public class DiscountMoreAdapter extends BaseAdapter {
 
 	private Context context;
 	
-	public TakeoutListAdapter(Context context) {
+	public DiscountMoreAdapter(Context context) {
 		super();
 		this.context = context;
 	}
@@ -26,7 +25,7 @@ public class TakeoutListAdapter extends BaseAdapter {
 	@Override
 	public int getCount() {
 		// TODO Auto-generated method stub
-		return 10;
+		return 6;
 	}
 
 	@Override
@@ -43,15 +42,10 @@ public class TakeoutListAdapter extends BaseAdapter {
 
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
-		View v = View.inflate(context, R.layout.takeout_service_item, null);
-		ImageView phoneView = (ImageView) v.findViewById(R.id.iv_takeout_business_phone);
-		phoneView.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				//用intent启动拨打电话  
-				PhoneCallUtil.call(context, "400 616 0066");
-			}
-		});
+		View v = View.inflate(context, R.layout.takeout_discount_more_adapter_item, null);
+		TextView oldPrice = (TextView) v.findViewById(R.id.takeout_discount_more_adapter_goods_price_old);
+		// 删除线。
+		oldPrice.getPaint().setFlags(Paint.STRIKE_THRU_TEXT_FLAG);
 		return v;
 	}
 

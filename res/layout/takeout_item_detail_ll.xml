@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical" >
 
     <!-- item detail title -->
@@ -13,18 +13,18 @@
         android:background="#1a94d3" >
 
         <Button
-            android:id="@+id/rl_takeout_item_title_back"
+            android:id="@+id/btn_takeout_item_title_back"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
-            android:layout_marginBottom="3dp"
+            android:layout_marginBottom="5dp"
             android:layout_marginLeft="5dp"
-            android:layout_marginTop="3dp"
+            android:layout_marginTop="5dp"
             android:background="@drawable/back_bg" />
 
         <TextView
-            android:id="@+id/rl_takeout_item_title_name"
+            android:id="@+id/btn_takeout_item_title_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -69,12 +69,36 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
+            <!-- 店铺viewpager -->
+
+            <RelativeLayout
+                android:id="@+id/layout_tab_imgs"
+                android:layout_width="match_parent"
+                android:layout_height="120dp" >
+
+                <cn.hubery.commservice.view.IndicateViewPager
+                    android:id="@+id/viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:background="#3ABEC0" />
+
+                <LinearLayout
+                    android:id="@+id/layout_title_imgs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal" />
+            </RelativeLayout>
+
             <!-- 店铺信息 -->
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="15dp"
-                android:background="#6e6e6e" />
+                android:background="#eeeeee" />
 
             <LinearLayout
                 android:id="@+id/ll_takeout_item_shop_info"
@@ -89,19 +113,49 @@
                     android:textColor="#3e86c0"
                     android:textSize="18sp"
                     android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/takeout_item_shop_info_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="MR.POTATO土豆专门店" />
+
+                    <TextView
+                        android:id="@+id/takeout_item_shop_info_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@id/takeout_item_shop_info_name"
+                        android:text="市南区   华茂市场 B区  龙旗购物中心 2-102" />
+
+                    <ImageView
+                        android:id="@+id/takeout_item_shop_info_phone"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/phone_home_icon" />
+                </RelativeLayout>
             </LinearLayout>
             <!-- 优惠信息 -->
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="15dp"
-                android:background="#6e6e6e" />
+                android:layout_marginTop="15dp"
+                android:background="#eeeeee" />
 
             <LinearLayout
                 android:id="@+id/ll_takeout_item_discount_info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical" >
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -109,19 +163,22 @@
                     android:textColor="#3e86c0"
                     android:textSize="18sp"
                     android:textStyle="bold" />
+
+                <include layout="@layout/takeout_item_detail_discount" />
             </LinearLayout>
             <!-- 更多优惠 -->
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="15dp"
-                android:background="#6e6e6e" />
+                android:background="#eeeeee" />
 
             <LinearLayout
                 android:id="@+id/ll_takeout_item_more_discount"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:orientation="vertical" >
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -129,19 +186,24 @@
                     android:textColor="#3e86c0"
                     android:textSize="18sp"
                     android:textStyle="bold" />
+
+                <ListView android:id="@+id/takeout_item_more_discount_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="500dp"></ListView>
             </LinearLayout>
             <!-- 热门菜单 -->
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="15dp"
-                android:background="#6e6e6e" />
+                android:background="#eeeeee" />
 
             <LinearLayout
                 android:id="@+id/ll_takeout_item_hot_menu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical" >
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -149,19 +211,30 @@
                     android:textColor="#3e86c0"
                     android:textSize="18sp"
                     android:textStyle="bold" />
+
+                <GridView
+                    android:id="@+id/takeout_item_hot_menu_gridview"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:horizontalSpacing="5dp"
+                    android:layout_marginTop="5dp"
+                    android:numColumns="2"
+                    android:verticalSpacing="5dp" >
+                </GridView>
             </LinearLayout>
             <!-- 照片墙 -->
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="15dp"
-                android:background="#6e6e6e" />
+                android:background="#eeeeee" />
 
             <LinearLayout
                 android:id="@+id/ll_takeout_item_pic_wall"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical" >
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -169,6 +242,8 @@
                     android:textColor="#3e86c0"
                     android:textSize="18sp"
                     android:textStyle="bold" />
+
+                <include layout="@layout/takeout_item_detail_pic_wall" />
             </LinearLayout>
 
             <!-- 餐厅简介 -->
@@ -176,7 +251,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="15dp"
-                android:background="#6e6e6e" />
+                android:background="#eeeeee" />
 
             <LinearLayout
                 android:id="@+id/ll_takeout_item_introduce"
@@ -196,7 +271,8 @@
                     android:id="@+id/tv_takeout_item_introduce_contents"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="人成受似在日本是一家知名企业。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。" />
+                    android:layout_marginBottom="20dp"
+                    android:text="@string/takeout_shop_discribe" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

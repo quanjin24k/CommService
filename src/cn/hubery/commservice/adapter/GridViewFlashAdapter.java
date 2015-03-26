@@ -8,6 +8,11 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+/**
+ * 闪电送    adapter
+ * @author Hubery
+ * @edit 2015年3月26日09:26:16
+ */
 public class GridViewFlashAdapter extends BaseAdapter {
 
 	private Context mContext;

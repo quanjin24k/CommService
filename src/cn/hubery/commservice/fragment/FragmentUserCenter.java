@@ -8,6 +8,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import cn.hubery.commservice.R;
 
+/**
+ * 用户中心  fragment
+ * @author Hubery
+ * @edit 2015年3月26日09:26:16
+ */
 @SuppressLint("NewApi")
 public class FragmentUserCenter extends Fragment {
 

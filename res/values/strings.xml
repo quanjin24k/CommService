@@ -5,6 +5,8 @@
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
 
+    <!-- 餐厅简介 -->
+    <string name="takeout_shop_discribe">大成寿司在日本是一家很知名的企业，于2010年7月1日正式登陆中国青岛，成为全球第114家店。大成寿司位于市南区武宁路101号我格广场5楼，店里环境很不错，店里是单点，没有自助的，但好吃就是王道。寿司的味道很好，材料很新鲜，口感也很好。老板更是超级nice。</string>
     
      <!-- xlistview -->
     <string name="xlistview_header_hint_normal">下拉刷新</string>
